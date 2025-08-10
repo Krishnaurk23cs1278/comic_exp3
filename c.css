@@ -1,0 +1,124 @@
+/* RESET & GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bangers', cursive;
+    background-color: #fffbea;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff4040;
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.logo {
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #000;
+}
+
+.search-box {
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* BANNER */
+.banner img {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-bottom: 5px solid #000;
+}
+
+/* WELCOME */
+.welcome {
+    padding: 20px;
+    text-align: center;
+    background: #fff3cd;
+    border-bottom: 5px solid #000;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    position: relative;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+    color: #000;
+    padding: 5px;
+    text-align: center;
+    border-top: 2px solid #000;
+}
+
+/* CONTENT SECTIONS */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.content-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-item img {
+    width: 300px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+}
+
+.text {
+    flex: 1;
+}
+
+/* FOOTER */
+.footer {
+    background: #ff4040;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+}
