@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Comic Strip Universe</title>
+  <style>
+    /* Reset & General Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    html, body { height: 100%; }
+
+    /* === Background (fixed, full-screen) === */
+    body {
+      /* correct background-image syntax */
+      background-image: url('escape.jpeg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed; /* keeps background fixed while scrolling */
+      background-size: cover;      /* cover entire viewport */
+      min-height: 100vh;           /* full viewport height */
+      /* fallback color in case image fails to load */
+      background-color: #f2f2f2;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 40px;
+      z-index: 1000;
+    }
+    nav .brand { display: flex; align-items: center; }
+    nav img { height: 40px; border-radius: 5px; }
+    nav h1 { color: #FFD700; margin-left: 10px; font-size: 22px; letter-spacing: 1px; }
+
+    nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+    nav ul li { margin-left: 25px; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav ul li a:hover { background-color: #FFD700; color: black; }
+
+    /* Landing Section */
+    .landing {
+      min-height: 100vh;               /* fill viewport */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 70px;               /* space for fixed navbar */
+      box-sizing: border-box;
+    }
+
+    /* Login Form */
+    .login-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.45);
+      width: 320px;
+      text-align: center;
+    }
+    .login-box h2 { margin-bottom: 20px; color: #333; }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+    .login-box input:focus {
+      border-color: #FFD700;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    }
+
+    .login-box button {
+      background-color: #FFD700;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.25s;
+    }
+    .login-box button:hover { background-color: #FFC107; }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      nav { padding: 10px 20px; flex-direction: column; gap: 8px; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .login-box { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="brand">
+      <img src="great.jpg" alt="Comic Logo">
+      <h1>Comic Strip Universe</h1>
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Comics</a></li>
+      <li><a href="#">Characters</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Landing Page -->
+  <section class="landing">
+    <div class="login-box">
+      <h2>Member Login</h2>
+      <form>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
